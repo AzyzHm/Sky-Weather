@@ -1,0 +1,15 @@
+api_key.js
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# Docker
+.docker/
+docker-compose.override.yml

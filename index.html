@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sky Weather - Get real-time weather information for any city worldwide">
+    <meta name="keywords" content="weather, forecast, temperature, humidity, wind speed">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Sky Weather - Real-time Weather Information</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-cloud-sun weather-icon"></i>
+                Sky Weather
+            </h1>
+            <p class="subtitle">Get real-time weather information worldwide</p>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section">
+                <div class="search-box">
+                    <div class="input-group">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="search-bar" 
+                            class="search-input"
+                            placeholder="Enter city name (e.g., London, Tokyo, New York)"
+                            aria-label="City name"
+                            autocomplete="off"
+                        >
+                        <button id="search-button" class="search-btn" aria-label="Search weather">
+                            <span class="btn-text">Search</span>
+                            <i class="fas fa-arrow-right btn-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="info" class="weather-info" role="region" aria-label="Weather information">
+                <div class="weather-header">
+                    <h2 class="location-title" id="country"></h2>
+                    <div class="temperature-display">
+                        <span class="temperature" id="temp"></span>
+                        <span class="weather-condition" id="weather"></span>
+                    </div>
+                </div>
+                
+                <div class="weather-grid">
+                    <div class="weather-card">
+                        <i class="fas fa-wind card-icon"></i>
+                        <div class="card-content">
+                            <span class="card-label">Wind Speed</span>
+                            <span class="card-value" id="wind-speed"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <i class="fas fa-tint card-icon"></i>
+                        <div class="card-content">
+                            <span class="card-label">Humidity</span>
+                            <span class="card-value" id="humidity"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <i class="fas fa-thermometer-half card-icon"></i>
+                        <div class="card-content">
+                            <span class="card-label">Pressure</span>
+                            <span class="card-value" id="pressure"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <i class="fas fa-eye card-icon"></i>
+                        <div class="card-content">
+                            <span class="card-label">Visibility</span>
+                            <span class="card-value" id="visibility"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <i class="fas fa-sun card-icon"></i>
+                        <div class="card-content">
+                            <span class="card-label">Sunrise</span>
+                            <span class="card-value" id="sunrise"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <i class="fas fa-moon card-icon"></i>
+                        <div class="card-content">
+                            <span class="card-label">Sunset</span>
+                            <span class="card-value" id="sunset"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-card">
+                        <i class="fas fa-clock card-icon"></i>
+                        <div class="card-content">
+                            <span class="card-label">Local Time</span>
+                            <span class="card-value" id="timezone"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="not-found" class="not-found" role="alert" aria-live="polite">
+                <div class="not-found-content">
+                    <img src="/pics/not-found.png" alt="City not found illustration" class="not-found-image">
+                    <h3 class="not-found-title">Oops! City not found</h3>
+                    <p class="not-found-message">Please check the spelling and try again</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sky Weather. Powered by OpenWeatherMap API</p>
+        </footer>
+    </div>
+
+    <div class="loading-overlay" id="loading">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Getting weather data...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
