@@ -7,7 +7,6 @@ Sky Weather is a simple and intuitive weather application built with FastAPI tha
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Docker Deployment](#docker-deployment)
 - [API Endpoints](#api-endpoints)
 - [License](#license)
 - [Project Status](#Project-Status)
@@ -24,8 +23,8 @@ Sky Weather is a simple and intuitive weather application built with FastAPI tha
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/AzyzHm/a-weather-app.git
-cd a-weather-app
+git clone https://github.com/AzyzHm/Sky-Weather.git
+cd Sky-Weather
 ```
 
 2. Create a virtual environment (optional but recommended):
